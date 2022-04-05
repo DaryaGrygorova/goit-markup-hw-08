@@ -1,0 +1,117 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $color-bgc-footer;
+}
+
+.footer__conteiner {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__contacts {
+    flex-grow: 1;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+// Адреса, контакти
+.address__item {
+    &:not(:first-child) {
+       margin-top: 7px;
+    }
+}
+
+.address__map-link {
+    font-style: normal;
+    letter-spacing: 0.03em;
+    color: $color-text-white;
+}
+
+.adress__link {
+    font-style: normal;
+    letter-spacing: 0.03em;
+    transition: color $transition-main;
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    &:focus {
+        color: $color-theme-main;
+    }
+}
+
+//  Соціальні мережі
+.footer__socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.footer__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-text-white;
+}
+
+// Підписка
+.subscription {
+    margin-left: 93px;
+}
+
+.subscription__title {
+    font-weight: 700;
+    line-height: 1.14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-text-white;
+}
+
+.subscription__form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subscription__input {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 15px;
+    align-items: center;
+    width: 358px;
+    height: 50px;
+    color: $color-text-white;
+    background-color: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.subscription__button {
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $color-text-white;
+    background-color: $color-theme-main;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+}
