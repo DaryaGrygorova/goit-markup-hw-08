@@ -1,0 +1,20 @@
+// Основні шрифти 
+$font-family-primary: 'Roboto', sans-serif;
+$font-family_secondary: 'Raleway', sans-serif;
+
+// Основна схема кольорів
+$color-theme-main: #2196f3;
+
+$color-text-primary: #757575;
+$color-text-secondary: #212121;
+$color-text-white: #ffffff;
+
+$color-bgc-main: #ffffff;
+$color-bgc-secondary: #f5f4fa;
+$color-bgc-footer: #2f303a;
+
+$color-icon-no-active: #afb1b8;
+$color-icon-footer: rgba(255, 255, 255, 0.1);
+
+// Час та функція трансформації
+$transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);

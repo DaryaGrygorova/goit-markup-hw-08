@@ -1,0 +1,37 @@
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features__item {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+}
+
+.features__wrapper {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: $color-bgc-secondary;
+    border-radius: 4px;
+}
+
+.features__title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $color-text-secondary;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.features__discription {
+    letter-spacing: 0.03em;
+}

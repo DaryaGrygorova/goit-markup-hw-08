@@ -2,11 +2,7 @@ body {
     font-family: $font-family-primary;
     font-size: 14px;
     line-height: 1.71;
-    padding-top: 60px;
+    padding-top: 80px;
     color: $color-text-primary;
     background-color: $color-bgc-main;
-
-    @media screen and (min-width: 1200px) {
-      padding-top: 80px;
-    }
 }

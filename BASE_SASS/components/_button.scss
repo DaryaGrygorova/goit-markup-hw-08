@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    transition: color $transition-main,
+                background-color $transition-main,
+                box-shadow $transition-main;
+
+    &:hover,
+    &:focus {
+        background-color: $color-theme-main;
+        color: $color-text-white;
+    }
+}
+
+.button__icon {
+    &--append {
+    margin-left: 10px;
+    }
+}

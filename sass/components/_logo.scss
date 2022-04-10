@@ -1,12 +1,11 @@
 .logo {
     display: inline-block;
-    color: $color-theme-main;
     font-family: $font-family_secondary;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
-
+    color: $color-theme-main;
 }
 
 .logo__text {
@@ -16,3 +15,23 @@
 .logo__text--light-theme {
     color: $color-text-white;
 }
+
+
+// .logo {
+//     display: inline-block;
+//     color: $color-theme-main;
+//     font-family: $font-family_secondary;
+//     font-weight: 700;
+//     font-size: 26px;
+//     line-height: 1.2;
+//     letter-spacing: 0.03em;
+
+// }
+
+// .logo__text {
+//     color: #000000;
+// }
+
+// .logo__text--light-theme {
+//     color: $color-text-white;
+// }

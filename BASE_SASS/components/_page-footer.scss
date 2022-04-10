@@ -5,39 +5,22 @@
 }
 
 .footer__conteiner {
-    text-align: center;
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    @media screen and (min-width: 1200px) {
-        text-align: start;
-    }
+    display: flex;
+    align-items: baseline;
 }
 
 .footer__contacts {
-    @media screen and (min-width: 1200px) {
-        flex-grow: 1;
-    }
+    flex-grow: 1;
 }
-
 
 .footer__logo {
     margin-bottom: 20px;
 }
 
 // Адреса, контакти
-.address__list {
-    margin-bottom: 60px;
-}
-
 .address__item {
     &:not(:first-child) {
-        margin-top: 7px;
+       margin-top: 7px;
     }
 }
 
@@ -47,7 +30,7 @@
     color: $color-text-white;
 }
 
-.address__link {
+.adress__link {
     font-style: normal;
     letter-spacing: 0.03em;
     transition: color $transition-main;
@@ -64,11 +47,6 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin-bottom: 60px;
-
-    @media screen and (min-width: 1200px) {
-        margin-right: 93px;
-    }
 }
 
 .footer__title {
@@ -83,11 +61,8 @@
 
 // Підписка
 .subscription {
-    @media screen and (min-width: 1200px) {
-        max-width: 570px;  
-    }
+    margin-left: 93px;
 }
-
 
 .subscription__title {
     font-weight: 700;
@@ -98,12 +73,9 @@
 }
 
 .subscription__form {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
-
-    @media screen and (min-width: 1200px) {
-       display: flex;
-       align-items: center;
-    }
 }
 
 .subscription__input {
@@ -111,7 +83,7 @@
     line-height: 1.25;
     padding-left: 15px;
     align-items: center;
-    width: 100%;
+    width: 358px;
     height: 50px;
     color: $color-text-white;
     background-color: #2f303a;
@@ -119,28 +91,14 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-    @media screen and (max-width: 1199px) {
-       max-width: 450px;
-    }
-
-    @media screen and (min-width: 480px) {
-        width: 450px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        max-width: 100%;
-    }
-
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
     }
 }
 
 .subscription__button {
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    min-width: 200px;
+    margin-left: 12px;
+    width: 200px;
     height: 50px;
     font-weight: 700;
     font-size: 16px;
@@ -151,12 +109,6 @@
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    @media screen and (min-width: 1200px) {
-        margin-top: 0;
-        margin-right: 0;
-        margin-left: 12px;
-    }
 
     &:hover,
     &:focus {
