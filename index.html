@@ -21,15 +21,65 @@
     <!-- Хедер -->
     <header class="header">
       <div class="conteiner header__conteiner">
-         <div class="header__desktop-menu">
+        <!-- Мобильное меню -->
+        <div class="header__mobile">
+          <a class="logo" href="./index.html">Web<span class="logo__text">Studio</span></a>
+          <button type="button" class="mobile__button" aria-expanded="false" data-menu-button>
+            <svg class="mobile__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="mobile__icon mobile__icon--open" href="./images/icons.svg#icon-menu"></use>
+              <use class="mobile__icon mobile__icon--close" href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile__menu" data-menu>
+          <nav class="page-nav">
+            <ul class="page-nav__list">
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380961111111">
+              +38 096 111 11 11</a>
+             </li>
+             <li class="contacts__item">
+               <a class="contacts__link contacts__link--small-gray" href="mailto:info@devstudio.com">
+               info@devstudio.com</a>
+             </li>
+          </ul>
+         <ul class="social-set">
+           <li class="social-set__item">
+             <a href="" class="social-set__link">Instagram</a>
+             </li>
+           <li class="social-set__item">
+             <a href="" class="social-set__link">Twitter</a>
+           </li>
+           <li class="social-set__item">
+             <a href="" class="social-set__link">Facebook</a>
+           </li>
+           <li class="social-set__item">
+             <a href="" class="social-set__link">LinkedIn</a>
+           </li>
+         </ul>
+        </div>
+     <!-- Меню для планшета та десктопа -->
+        <div class="header__menu">
                   <nav class="page-nav">
                     <a class="logo" href="./index.html">Web<span class="logo__text">Studio</span></a>
                     <ul class="page-nav__list">
                       <li class="page-nav__item">
-                        <a class="page-nav__link" href="./index.html">Студия</a>
+                        <a class="page-nav__link page-nav__link--current" href="./index.html">Студия</a>
                       </li>
                       <li class="page-nav__item">
-                        <a class="page-nav__link  page-nav__link--current" href="./portfolio.html">Портфолио</a>
+                        <a class="page-nav__link" href="./portfolio.html">Портфолио</a>
                       </li>
                       <li class="page-nav__item">
                         <a class="page-nav__link" href="">Контакты</a>
@@ -38,7 +88,7 @@
                   </nav>
                   <ul class="contacts">
                     <li class="contacts__item">
-                      <a class="contacts__link" href="mailto:info@devstudio.com"><svg class="contacts__icon" width="16" height="16">
+                      <a class="contacts__link" href="mailto:info@devstudio.com"><svg class="contacts__icon" width="16" height="12">
                           <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com</a>
@@ -50,55 +100,7 @@
                         +38 096 111 11 11</a>
                     </li>
                   </ul>
-         </div>
-      
-        <!-- Мобильное меню -->
-          <div class="header__mobile-menu">
-            <a class="logo" href="./index.html">Web<span class="logo__text">Studio</span></a>
-            <div class="mobile__wrapper">
-              <svg class="mobile__icon" width="24" height="24" data-menu-button>
-                <use href="./images/icons.svg#icon-menu"></use>
-              </svg>
-            </div>
-          </div>
-          <!-- <div class="mobile__menu" aria-expanded="false" data-menu>
-                    <div class="mobile__wrapper">
-                    <svg class="mobile__icon mobile__icon--close" width="24" height="24" data-menu-button>
-                        <use href="./images/icons.svg#icon-menu-close"></use>
-                      </svg>
-                    </div>
-                      <nav class="page-nav">
-                        <ul class="page-nav__list">
-                          <li class="page-nav__item">
-                            <a class="page-nav__link page-nav__link--current" href="./index.html">Студия</a>
-                          </li>
-                          <li class="page-nav__item">
-                            <a class="page-nav__link" href="./portfolio.html">Портфолио</a>
-                          </li>
-                          <li class="page-nav__item">
-                            <a class="page-nav__link" href="">Контакты</a>
-                          </li>
-                        </ul>
-                      </nav>
-                      <ul class="contacts">
-                        <li class="contacts__item">
-                          <a class="contacts__link" href="tel:+380961111111">
-                          +38 096 111 11 11</a>
-                        </li>
-                        <li class="contacts__item">
-                          <a class="contacts__link contacts__link--small-gray" href="mailto:info@devstudio.com">
-                          info@devstudio.com</a>
-                        </li>
-                      </ul>
-                      <ul class="social-set">
-                        <li class="social-set__item">Instagram</li>
-                        <li class="social-set__item">Twitter</li>
-                        <li class="social-set__item">Facebook</li>
-                        <li class="social-set__item">LinkedIn</li>
-                      </ul>
-                  </div> -->
-</div>
-</div>
+        </div>
       </div>
     </header>
     <main>
@@ -167,7 +169,9 @@
           <ul class="business">
             <li class="business__item">
               <img class="business__img"
-                src="./images/box1.jpg"
+                srcset="./images/business/box1.jpg 1x,
+    ./images/business/box1@2x.jpg 2x"
+                src="./images/business/box1.jpg"
                 alt="человек набирает код согласно нарисованого алгоритма"
                 width="370"
                 height="294"
@@ -178,7 +182,9 @@
             </li>
             <li class="business__item">
               <img class="business__img"
-                src="./images/box2.jpg"
+                srcset="./images/business/box2.jpg 1x,
+    ./images/business/box2@2x.jpg 2x"
+                src="./images/business/box2.jpg"
                 alt="человек выбирает варианты макетов сайта для мобильных устройств"
                 width="370"
                 height="294"
@@ -189,7 +195,9 @@
             </li>
             <li class="business__item">
               <img class="business__img"
-                src="./images/box3.jpg"
+                srcset="./images/business/box3.jpg 1x,
+    ./images/business/box3@2x.jpg 2x"
+                src="./images/business/box3.jpg"
                 alt="человек с помощью планшета подбирает палитру цветов"
                 width="370"
                 height="294"
@@ -208,10 +216,13 @@
           <ul class="team">
             <li class="team__item ">
               <img class="team__img"
-                src="./images/img1.jpg"
+                srcset="./images/team/img1-270.jpg 270w,
+                ./images/team/img1-450.jpg 450w,
+                ./images/team/img1-540.jpg 540w,
+                ./images/team/img1-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 320px) 450px, 100%"
+                src="./images/team/img1-450.jpg"
                 alt="молодой мужчина, короткостриженый шатен с бородой, в очках, широко улыбается; бордовая рубашка, две верхние пуговицы расстегнуты"
-                width="270"
-                height="260"
               />
               <div class="team__discription">
                 <h3 class="team__title">Игорь Демьяненко</h3>
@@ -244,10 +255,13 @@
             </li>
             <li class="team__item">
               <img class="team__img"
-                src="./images/img2.jpg"
+                srcset="./images/team/img2-270.jpg 270w,
+                ./images/team/img2-450.jpg 450w,
+                ./images/team/img2-540.jpg 540w,
+                ./images/team/img2-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 320px) 450px, 100%"
+                src="./images/team/img2-450.jpg"
                 alt="девушка-блондинка, распущенные волосы ниже плеч зачесаны на правую сторону,  в очках, широко улыбается; черный пиджак из-под которого виднеется белая блуза, руки скрещены на груди"
-                width="270"
-                height="260"
               />
               <div class="team__discription">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -278,10 +292,13 @@
             </li>
             <li class="team__item">
               <img class="team__img"
-                src="./images/img3.jpg"
+                srcset="./images/team/img3-270.jpg 270w,
+                ./images/team/img3-450.jpg 450w,
+                ./images/team/img3-540.jpg 540w,
+                ./images/team/img3-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 320px) 450px, 100%"
+                src="./images/team/img3-450.jpg"
                 alt="молодой мужчина, шатен с бородкой, голова вполоборота влево, широкая улыбка; светло-голубая рубашка, верхняя пуговица расстегнута, руки скрещены на груди"
-                width="270"
-                height="260"
               />
               <div class="team__discription">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -311,10 +328,13 @@
             </li>
             <li class="team__item">
               <img class="team__img"
-                src="./images/img4.jpg"
+                srcset="./images/team/img4-270.jpg 270w,
+                ./images/team/img4-450.jpg 450w,
+                ./images/team/img4-540.jpg 540w,
+                ./images/team/img4-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 320px) 450px, 100%"
+                src="./images/team/img4-450.jpg"
                 alt="молодой мужчина в очках, брюнет с бородой, на лице легкая улыбка; черная футболка, руки скрещены на груди"
-                width="270"
-                height="260"
               />
               <div class="team__discription">
                 <h3 class="team__title">Михаил Ермаков</h3>
