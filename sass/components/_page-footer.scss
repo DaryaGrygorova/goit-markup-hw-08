@@ -20,6 +20,11 @@
 }
 
 .footer__contacts {
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
+        flex-basis: calc(100%/2);
+    }
+
     @media screen and (min-width: 1200px) {
         flex-grow: 1;
     }
@@ -32,7 +37,9 @@
 
 // Адреса, контакти
 .address__list {
-    margin-bottom: 60px;
+    @media screen and (max-width: 1199px) {
+       margin-bottom: 60px;
+    }
 }
 
 .address__item {
@@ -63,10 +70,15 @@
 .footer__socials {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     margin-bottom: 60px;
 
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
+        flex-basis: calc(100%/2);
+    }
+
     @media screen and (min-width: 1200px) {
+        justify-content: left;
         margin-right: 93px;
     }
 }

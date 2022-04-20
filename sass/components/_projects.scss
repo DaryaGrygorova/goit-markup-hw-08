@@ -14,6 +14,8 @@
 }
 
 .projects__item {
+    display: flex;
+
     margin-bottom: 30px;
     background: $color-bgc-main;
 
@@ -25,6 +27,10 @@
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         flex-basis: calc((100% - 60px)/2);
     }
+
+    @media screen and (min-width: 1199px) {
+        flex-basis: calc((100% - 90px)/3);
+    }
 }
 
 .projects__link {
@@ -35,6 +41,11 @@
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -50,9 +61,7 @@
     border-top: 0px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-       &--big-pb {
-           padding-bottom: 56px;
-       } 
+       flex-grow: 1;
     }
 }
 
@@ -105,6 +114,6 @@
     color: $color-text-white;
 
     @media screen and (max-width: 380px) {
-    font-size: 18px;
+    font-size: 14px;
     }
 }
