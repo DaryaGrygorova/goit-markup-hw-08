@@ -73,12 +73,13 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 48px 40px 15px;
   z-index: 5;
+  overflow-y: scroll;
   background-color: $color-bgc-main;
 
   @media screen and (max-width: 380px) {
-    padding: 48px 15px 15px;
+    padding-right: 15px;
   }
 }
 
@@ -114,7 +115,7 @@
 }
 
 .mobile-contacts {
-  margin-top: calc(100vh - 496px);
+  margin-top: 40vh;
 }
 
 .mobile-contacts__item {
@@ -133,6 +134,10 @@
   @media screen and (max-width: 380px) {
     font-size: 24px;
     line-height: 1.18;
+
+    &:last-child {
+      margin-bottom: 5vh;
+    }
   }
 }
 
@@ -177,12 +182,15 @@
     border-left: 1px solid rgba(33, 33, 33, 0.2);
   }
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 440px) {
     flex-basis: calc((100%-70px) / 2);
-    margin-bottom: 10px;
+
+    &:nth-last-child(n + 3) {
+    margin-bottom: 20px;
+    }
 
     &:nth-child(2n) {
-      padding-left: 20%;
+      padding-left: 15vw;
     }
 
     &:not(:nth-child(2n)) {
