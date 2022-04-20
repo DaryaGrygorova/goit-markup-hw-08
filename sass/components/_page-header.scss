@@ -19,7 +19,7 @@
 }
 
 // Мобільне меню
-.header__mobile {
+.mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,25 +87,18 @@
 }
 
 // Розділ навігації
-.page-nav {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
+.mobile-nav__item {
+  &:not(:last-child) {
+    padding-bottom: 32px;
+  }
+  
+  &:hover,
+  &:focus {
+    color: $color-theme-main;
   }
 }
 
-.page-nav__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    margin-left: 88px;
-  }
-
-   @media screen and (min-width: 1200px) {
-    margin-left: 93px;
-  }
-}
-
-.page-nav__link {
+.mobile-nav__link {
   display: block;
   color: $color-text-secondary;
   font-weight: 500;
@@ -118,38 +111,139 @@
   &:focus {
     color: $color-theme-main;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $color-text-secondary;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+.mobile-contacts {
+  margin-top: calc(100vh - 496px);
+}
+
+.mobile-contacts__item {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: $color-theme-main;
+  
+  &:last-child {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+    line-height: 1.18;
+  }
+}
+
+.mobile-contacts__link {
+  display: inline-flex;
+  align-items: center;
+  transition: color $transition-main;
+  
+  &:hover,
+  &:focus {
+    color: $color-theme-main;
+  }
+
+  &--small-gray {
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-    transition: color $transition-main;
+    color: $color-text-primary;
   }
-}   
+}
 
-.page-nav__item {
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      padding-bottom: 32px;
-    }
+.mobile-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.mobile-socials__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $color-theme-main;
+
+  &:not(:last-child) {
+    padding-right: 10px;
   }
 
-  @media screen and (min-width: 768px) {
-    &:not(:first-child) {
-      margin-left: 50px;
+  &:not(:first-child) {
+    padding-left: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  @media screen and (max-width: 479px) {
+    flex-basis: calc((100%-70px) / 2);
+    margin-bottom: 10px;
+
+    &:nth-child(2n) {
+      padding-left: 20%;
     }
 
-    &:hover,
-    &:focus {
-      color: $color-theme-main;
+    &:not(:nth-child(2n)) {
+      padding: 0;
+      border: none;
     }
   }
 }
+
+// Меню для планшета та десктопа
+.header__menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
+
+.page-nav__list {
+  display: flex;
+  margin-left: 88px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.page-nav__item {
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-theme-main;
+  }
+}
+
+.page-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $color-text-secondary;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color $transition-main;
+
+  &:hover,
+  &:focus {
+    color: $color-theme-main;
+  }
+}   
 
 .page-nav__link--current {
   @media screen and (min-width: 768px) {
@@ -171,54 +265,30 @@
 
 // Контакти
 .contacts {
-  @media screen and (max-width: 767px) {
-    margin-top: calc(100vh - 496px);
+  margin-left: auto;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-top: 20px;
-    margin: 0;
-    margin-left: auto;
-  }
-
-   @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    margin-left: auto;
   }
 }
 
 .contacts__item {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    font-style: normal;
-    letter-spacing: 0.02em;
-    color: $color-theme-main;
+  font-size: 12px;
+  line-height: 1.17;
+  color: $color-text-primary;
 
-    &:last-child {
-    margin-bottom: 64px;    
-    }
-  }
-
-  @media screen and (max-width: 380px) {
-    font-size: 24px;
-    line-height: 1.18;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-      font-size: 12px;
-      line-height: 1.17;
-      color: $color-text-primary;
-
+  @media screen and (max-width: 1199px) { 
     &:not(:first-child) {
       margin-top: 10px;
     }
   }
-
+  
   @media screen and (min-width: 1200px) {
     &:not(:first-child) {
       margin-left: 50px;
@@ -235,19 +305,13 @@
   &:focus {
     color: $color-theme-main;
   }
+
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
   }
-}
-
-.contacts__link--small-gray {
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: $color-text-primary;
 }
 
 .contacts__icon {
@@ -258,55 +322,5 @@
   .contacts__link:hover &,
   .contacts__link:focus & {
     fill: $color-theme-main;
-  }
-}
-
-.social-set {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: stretch;
-  align-items: center;
-
-}
-
-.social-set__item {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: $color-theme-main;
-
-  &:not(:last-child) {
-    padding-right: 10px;
-  }
-
-  &:not(:first-child) {
-    padding-left: 10px;
-    border-left: 1px solid rgba(33, 33, 33, 0.2);
-  }
-
-  @media screen and (max-width: 479px) {
-    flex-basis: calc((100%-70px) / 2);
-    margin-bottom: 10px;
-  
-    &:nth-child(2n) {
-      padding-left: 20%;
-    }
-  
-    &:not(:nth-child(2n)) {
-      padding: 0;
-      border: none;
-    }
-  }
-}
-
-// Меню для планшета
-.header__menu {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
   }
 }
