@@ -208,6 +208,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -274,10 +275,6 @@
 // Контакти
 .contacts {
   margin-left: auto;
-
-  @media screen and (max-width: 1199px) {
-    margin-top: 20px;
-  }
 
   @media screen and (min-width: 1200px) {
     display: flex;

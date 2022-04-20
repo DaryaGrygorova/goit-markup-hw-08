@@ -465,6 +465,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -534,12 +537,6 @@ body {
 
 .contacts {
   margin-left: auto;
-}
-
-@media screen and (max-width: 1199px) {
-  .contacts {
-    margin-top: 20px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
