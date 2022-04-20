@@ -78,7 +78,7 @@
   background-color: $color-bgc-main;
 
   @media screen and (max-width: 380px) {
-    padding: 48px 15px 15px;    
+    padding: 48px 15px 15px;
   }
 }
 
@@ -87,11 +87,21 @@
 }
 
 // Розділ навігації
-@media screen and (max-width: 480px) {
-    .page-nav__item {
-        &:not(:last-child) {
-            padding-bottom: 32px;
-    }
+.page-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-nav__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+   @media screen and (min-width: 1200px) {
+    margin-left: 93px;
   }
 }
 
@@ -108,124 +118,8 @@
   &:focus {
     color: $color-theme-main;
   }
-}
 
-// Контакти
-@media screen and (max-width: 767px) {
-  .contacts {
-    margin-top: calc(100vh - 496px);
-  }
-
-  .contacts__item {
-    margin-bottom: 32px;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    font-style: normal;
-    letter-spacing: 0.02em;
-    color: $color-theme-main;
-  }
-
-  .contacts__item:last-child {
-    margin-bottom: 64px;
-  }
-}
-
-.contacts__link {
-  display: inline-flex;
-  align-items: center;
-  transition: color $transition-main;
-
-  &:hover,
-  &:focus {
-    color: $color-theme-main;
-  }
-}
-
-.contacts__link--small-gray {
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: $color-text-primary;
-}
-
-.social-set {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: stretch;
-  align-items: center;
-}
-
-.social-set__item {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: $color-theme-main;
-
-  &:not(:last-child) {
-    padding-right: 10px;
-  }
-
-  &:not(:first-child) {
-    padding-left: 10px;
-    border-left: 1px solid rgba(33, 33, 33, 0.2);
-  }
-}
-
-@media screen and (max-width: 380px) {
-    .contacts__item {
-        font-size: 24px;
-        line-height: 1.18;
-    }
-}
-
-@media screen and (max-width: 479px) {
-    .social-set__item {
-        flex-basis: calc((100%-70px)/2);
-        margin-bottom: 10px;
-
-        &:nth-child(2n) {
-            padding-left: 20%;
-        }
-
-        &:not(:nth-child(2n)) {
-            padding: 0;
-            border: none;
-        }
-    }
-}
-
-// Меню для планшета
-@media screen and (max-width: 768px) {
-  .header__menu {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header__menu {
-    display: flex;
-  }
-
-  // Розділ навігації
-  .page-nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .page-nav__list {
-    display: flex;
-    margin-left: 88px;
-  }
-
-  .page-nav__item {
-    &:not(:first-child) {
-      margin-left: 50px;
-    }
-  }
-
-  .page-nav__link {
+  @media screen and (min-width: 768px) {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -235,14 +129,30 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     transition: color $transition-main;
+  }
+}   
+
+.page-nav__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
 
     &:hover,
     &:focus {
       color: $color-theme-main;
     }
   }
+}
 
-  .page-nav__link--current {
+.page-nav__link--current {
+  @media screen and (min-width: 768px) {
     position: relative;
     color: $color-theme-main;
 
@@ -260,8 +170,12 @@
 }
 
 // Контакти
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts {
+.contacts {
+  @media screen and (max-width: 767px) {
+    margin-top: calc(100vh - 496px);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0;
     padding-top: 20px;
     margin: 0;
@@ -271,48 +185,130 @@
     color: $color-text-primary;
   }
 
-  .contacts__item {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-}
-
-.contacts__icon {
-    margin-right: 10px;
-    fill: $color-text-primary;
-    transition: fill $transition-main;
-
-    .contacts__link:hover &,
-    .contacts__link:focus & {
-        fill: $color-theme-main;
-    }
-}
-
-// Меню для десктопа
-@media screen and (min-width: 1200px) {
-    .page-nav__list {
-      margin-left: 93px;
-    }
-
-
-  .contacts {
+   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     margin: 0;
     margin-left: auto;
   }
+}
 
-  .contacts__item {
+.contacts__item {
+
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: $color-theme-main;
+
+    &:last-child {
+    margin-bottom: 64px;    
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
     &:not(:first-child) {
       margin-left: 50px;
     }
   }
+}
 
-  .contacts__link {
+.contacts__link {
+  display: inline-flex;
+  align-items: center;
+  transition: color $transition-main;
+
+  &:hover,
+  &:focus {
+    color: $color-theme-main;
+  }
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+
+.contacts__link--small-gray {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $color-text-primary;
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: $color-text-primary;
+  transition: fill $transition-main;
+
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $color-theme-main;
+  }
+}
+
+.social-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+
+}
+
+.social-set__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $color-theme-main;
+
+  &:not(:last-child) {
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  @media screen and (max-width: 479px) {
+    flex-basis: calc((100%-70px) / 2);
+    margin-bottom: 10px;
+  
+    &:nth-child(2n) {
+      padding-left: 20%;
+    }
+  
+    &:not(:nth-child(2n)) {
+      padding: 0;
+      border: none;
+    }
+  }
+}
+
+// Меню для планшета
+.header__menu {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
