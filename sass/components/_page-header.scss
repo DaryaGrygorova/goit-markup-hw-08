@@ -176,13 +176,9 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding: 0;
     padding-top: 20px;
     margin: 0;
     margin-left: auto;
-    font-size: 12px;
-    line-height: 1.17;
-    color: $color-text-primary;
   }
 
    @media screen and (min-width: 1200px) {
@@ -194,8 +190,6 @@
 }
 
 .contacts__item {
-
-
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
     font-weight: 500;
@@ -216,6 +210,10 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 1.17;
+      color: $color-text-primary;
+
     &:not(:first-child) {
       margin-top: 10px;
     }

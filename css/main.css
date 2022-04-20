@@ -428,13 +428,9 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
-    padding: 0;
     padding-top: 20px;
     margin: 0;
     margin-left: auto;
-    font-size: 12px;
-    line-height: 1.17;
-    color: #757575;
   }
 }
 
@@ -474,6 +470,11 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item {
+    font-size: 12px;
+    line-height: 1.17;
+    color: #757575;
+  }
   .contacts__item:not(:first-child) {
     margin-top: 10px;
   }
