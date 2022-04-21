@@ -22,26 +22,20 @@
 .footer__contacts {
     @media screen and (max-width: 1199px) {
         justify-content: center;
-        flex-basis: calc(100%/2);
+        // flex-basis: calc(100%/2);
     }
 
     @media screen and (min-width: 1200px) {
+        margin-right: 70px;
         flex-grow: 1;
     }
 }
-
 
 .footer__logo {
     margin-bottom: 20px;
 }
 
 // Адреса, контакти
-.address__list {
-    @media screen and (max-width: 1199px) {
-       margin-bottom: 60px;
-    }
-}
-
 .address__item {
     &:not(:first-child) {
         margin-top: 7px;
@@ -70,11 +64,14 @@
 .footer__socials {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 60px;
+    }
 
     @media screen and (max-width: 1199px) {
         justify-content: center;
-        flex-basis: calc(100%/2);
+        // flex-basis: calc(100%/2);
     }
 
     @media screen and (min-width: 1200px) {
@@ -95,11 +92,14 @@
 
 // Підписка
 .subscription {
+    @media screen and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+ 
     @media screen and (min-width: 1200px) {
         max-width: 570px;  
     }
 }
-
 
 .subscription__title {
     font-weight: 700;

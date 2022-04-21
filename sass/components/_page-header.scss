@@ -114,6 +114,10 @@
   }
 }
 
+.mobile-nav__link--current {
+  color: $color-theme-main;
+}
+
 .mobile-contacts {
   margin-top: 40vh;
 }
@@ -255,7 +259,6 @@
 }   
 
 .page-nav__link--current {
-  @media screen and (min-width: 768px) {
     position: relative;
     color: $color-theme-main;
 
@@ -269,7 +272,7 @@
       background-color: $color-theme-main;
       border-radius: 2px;
     }
-  }
+  
 }
 
 // Контакти
