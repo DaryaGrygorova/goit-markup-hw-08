@@ -339,7 +339,7 @@ body {
           flex-direction: column;
 }
 
-.mobile-nav__item:not(:last-child) {
+.mobile-nav__item {
   margin-bottom: 32px;
 }
 

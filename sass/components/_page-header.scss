@@ -90,9 +90,7 @@
 
 // Розділ навігації
 .mobile-nav__item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 32px;
   
   &:hover,
   &:focus {
