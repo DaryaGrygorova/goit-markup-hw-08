@@ -84,7 +84,8 @@
 }
 
 .mobile__menu.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 // Розділ навігації
@@ -119,7 +120,7 @@
 }
 
 .mobile-contacts {
-  margin-top: 40vh;
+  margin-top: auto;
   margin-bottom: 64px;
 
   @media screen and (max-width: 380px) {
