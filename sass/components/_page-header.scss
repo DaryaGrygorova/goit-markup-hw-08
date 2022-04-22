@@ -90,7 +90,7 @@
 // Розділ навігації
 .mobile-nav__item {
   &:not(:last-child) {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
   
   &:hover,
@@ -120,10 +120,15 @@
 
 .mobile-contacts {
   margin-top: 40vh;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 380px) {
+      margin-bottom: 5vh;
+    }
+
 }
 
 .mobile-contacts__item {
-  margin-bottom: 32px;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
@@ -131,17 +136,13 @@
   letter-spacing: 0.02em;
   color: $color-theme-main;
   
-  &:last-child {
-    margin-bottom: 64px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
   }
 
   @media screen and (max-width: 380px) {
     font-size: 24px;
     line-height: 1.18;
-
-    &:last-child {
-      margin-bottom: 5vh;
-    }
   }
 }
 

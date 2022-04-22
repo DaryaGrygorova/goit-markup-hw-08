@@ -334,7 +334,7 @@ body {
 }
 
 .mobile-nav__item:not(:last-child) {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .mobile-nav__item:hover, .mobile-nav__item:focus {
@@ -362,10 +362,16 @@ body {
 
 .mobile-contacts {
   margin-top: 40vh;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 380px) {
+  .mobile-contacts {
+    margin-bottom: 5vh;
+  }
 }
 
 .mobile-contacts__item {
-  margin-bottom: 32px;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
@@ -374,17 +380,14 @@ body {
   color: #2196f3;
 }
 
-.mobile-contacts__item:last-child {
-  margin-bottom: 64px;
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 380px) {
   .mobile-contacts__item {
     font-size: 24px;
     line-height: 1.18;
-  }
-  .mobile-contacts__item:last-child {
-    margin-bottom: 5vh;
   }
 }
 
