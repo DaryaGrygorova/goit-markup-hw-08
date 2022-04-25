@@ -59,7 +59,10 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: $color-text-primary;
-    overflow-x: scroll;
+
+    @media screen and (max-width: 767px) {
+      overflow-x: scroll;
+    }
 }
 
 .modal-box__title {

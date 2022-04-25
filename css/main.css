@@ -1345,7 +1345,12 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-  overflow-x: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-box__wrapper {
+    overflow-x: scroll;
+  }
 }
 
 .modal-box__title {
